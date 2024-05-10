@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+body{
+    background: #f0f0f0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1em;
+}
+main{
+    width: 800px;
+    height: 600px;
+    background: #fff;
+    border-radius: 30px;
+    border-bottom-right-radius: 200px;
+    padding: 20px;
+}
+form{
+    display: flex;
+    margin: 5px 60px 5px 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+form .field{
+    display: flex;
+    /* justify-content: center; */
+    margin: 20px 15px 20px 0;
+    /* align-items: center; */
+    width: 25%;
+    flex-direction: column;
+    font-weight: bold;
+}
+form .field input{
+    width: 80%;
+    font-size: 1.7em;
+    padding: 10px 15px 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #afafaf;
+    outline: 2px solid #afafaf;
+}
+form .field input.active{
+    border: 1px solid #cb6b6d;
+    outline: 2px solid #cb6b6d;
+    color: #cb6b6d;
+}
+form .field .error{
+    margin: 10px 0px 0px 0px;
+    font-size: 0.8em;
+    display: none;
+    font-weight: normal;
+    color: #cb6b6d;
+}
+form .field .error.active{
+    display: block;
+}
+form .field label{
+    letter-spacing: 5px;
+    color: #646464;
+    margin: 5px;
+}
+form .field label.active{
+    color: #cb6b6d;
+}
+form button{
+    transition: 200ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    border-radius: 100%;
+    border: none;
+    background: #864cff;
+    width: 80px;
+    height: 80px;
+}
+form button:hover{
+    cursor: pointer;
+    background: #151515;
+}
+section{
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+}
+section span{
+    font-size: 6rem;
+    font-weight: bolder;
+    line-height: 100%;
+}
+section span > span{
+    font-size: 7rem;
+    letter-spacing: 20px;
+    font-style: italic;
+    color: #864cff;
+}
+.attribution{
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    font-weight: normal;
+}
+.attribution a{
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+    body{
+        justify-content: start;
+    }
+    main {
+        margin-top: 30px;
+        width: 90%; /* Ajuste conforme necessário para dispositivos menores */
+        max-width: none; /* Remove a largura máxima em telas menores */
+        height: 500px;
+        border-bottom-right-radius: 30%; /* Ajuste conforme necessário */
+    }
+    form {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 60px 0;
+        margin: 0 0 60px 0;
+    }
+    form button{
+        width: 40px;
+        height: 40px;
+        bottom: -20px;
+        right: calc(50% - 20px);
+    }
+    form label{
+        font-size: 0.7rem;
+    }
+    form .field input{
+        font-size: 1rem;
+    }
+    form .field {
+        width: 100%; /* Ocupa a largura total */
+        margin: 10px 0; /* Espaçamento inferior */
+    }
+
+    section span {
+        font-size: 2.0rem;
+    }
+    section span > span{
+        font-size: 3rem;
+    }
+    .attribution{
+        text-align: center;
+        width: 90%;
+        right: 5%;
+        font-size: 0.7rem;
+    }
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Bold.ttf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Regular.ttf');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-ExtraBold.ttf');
+    font-weight:bolder;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-ExtraBoldItalic.ttf');
+    font-weight:bolder;
+    font-style: italic;
+}
